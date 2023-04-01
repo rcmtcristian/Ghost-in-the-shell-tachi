@@ -1,12 +1,10 @@
 import React from "react";
-// import Iphone from "../assets/images/iphone-14.jpg";
-// import HoldingIphone from "../assets/images/iphone-hand.png";
 
-function jumbotron() {
-  const handleLearnMore = () => {
-    const element = document.querySelector(".sound-section");
+function jumbotron(): JSX.Element {
+  const handleLearnMore: () => void = () => {
+    const element: Element | null = document.querySelector(".sound-section");
     window.scrollTo({
-      top: element.getBoundingClientRect().top,
+      top: element?.getBoundingClientRect().top ?? 0,
       left: 0,
       behavior: "smooth",
     });
@@ -14,7 +12,6 @@ function jumbotron() {
   return (
     <div className="jumbotron-section wrapper">
       <h2 className="title">New</h2>
-      {/* <img className="logo" src={Iphone} alt="iphone" /> */}
       <h1 className="title">Tachikoma</h1>
       <p className="text">Bigger And Better </p>
       <span className="description"> Advanced AI System</span>
@@ -29,7 +26,6 @@ function jumbotron() {
           </a>
         </li>
       </ul>
-      {/* <img className="iphone-img" src={HoldingIphone} alt="iphone" /> */}
     </div>
   );
 }

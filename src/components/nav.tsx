@@ -3,13 +3,12 @@ import Logo from "../assets/images/logo.svg";
 import Search from "../assets/images/search.svg";
 import Store from "../assets/images/store.svg";
 
-function nav() {
+function nav(): JSX.Element {
   return (
     <nav className="nav-wrapper">
       <div className="nav-content">
         <ul className="list-styled">
           <li>
-            {/* <img src={Logo} alt="AppleD" /> */}
             buy
           </li>
           <li>
