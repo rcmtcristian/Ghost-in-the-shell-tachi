@@ -59,7 +59,7 @@ const WebgiViewer = forwardRef((prop, ref) => {
         gsap.to(targetRef, {
           x: 0.11,
           y: 0.0,
-          z: 0.0,
+          z: -0.0,
           duration: 2,
         });
         viewerRef.scene.activeCamera.setCameraOptions({
