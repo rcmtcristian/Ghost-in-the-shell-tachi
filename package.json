@@ -15,6 +15,8 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/three": "^0.139.0",
     "@types/webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-types-0.5.5.tgz",
+    "barba.js": "^1.0.0",
+    "charming": "^3.0.2",
     "gsap": "^3.11.4",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-normalize": "^10.0.1",
