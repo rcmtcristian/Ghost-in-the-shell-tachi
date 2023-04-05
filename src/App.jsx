@@ -5,8 +5,6 @@ import DisplaySection from "./components/DisplaySection";
 import WebgiViewer from "./components/WebgiViewer";
 import { useRef } from "react";
 import Loader from "./components/loader";
-import Barba from "barba.js";
-import { gsap } from "gsap";
 
 function App() {
   const webgiViewerRef = useRef();

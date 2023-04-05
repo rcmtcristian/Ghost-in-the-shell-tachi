@@ -15,7 +15,8 @@ import gsap from "gsap";
 export const ScrollAnimation = (position, target, isMobile, onUpdate) => {
   const tl = gsap.timeline();
   tl.to(position, {
-    x: !isMobile ? -3.38 : -7.0,
+    // 1. Move the camera to the sound section
+    x: !isMobile ? -3.38 : 7.0,
     y: !isMobile ? -10.74 : -12.2,
     z: !isMobile ? -5.93 : -6.0,
     scrollTrigger: {
@@ -28,9 +29,9 @@ export const ScrollAnimation = (position, target, isMobile, onUpdate) => {
     onUpdate,
   })
     .to(target, {
-      x: !isMobile ? 1.53 : 0.7,
-      y: !isMobile ? 0.77 : 1.9,
-      z: !isMobile ? -1.08 : 0.7,
+      x: !isMobile ? 0 : 0.7,
+      y: !isMobile ? 0 : 1.9,
+      z: !isMobile ? 0 : 0.7,
       scrollTrigger: {
         trigger: ".sound-section",
         start: "top bottom",

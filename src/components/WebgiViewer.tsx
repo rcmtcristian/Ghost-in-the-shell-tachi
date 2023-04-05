@@ -46,9 +46,9 @@ const WebgiViewer = forwardRef((prop, ref) => {
         canvasContainerRef.current.style.pointerEvents = "all";
         prop.contentRef.current.style.opacity = "0";
         gsap.to(positionRef, {
-          x: 13.04,
-          y: -2.01,
-          z: 2.29,
+          x: 113.04,
+          y: -12.01,
+          z: 12.29,
           duration: 2,
           onUpdate: () => {
             viewerRef.setDirty();
@@ -107,7 +107,7 @@ const WebgiViewer = forwardRef((prop, ref) => {
       // This must be called once after all plugins are added.
       viewer.renderer.refreshPipeline();
 
-      await manager.addFromPath("scene-white.glb");
+      await manager.addFromPath("scene-tachi-metal.glb");
       viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
 
       viewer.scene.activeCamera.setCameraOptions({ controlsEnabled: false });
