@@ -9,41 +9,36 @@ function nav(): JSX.Element {
       <div className="nav-content">
         <ul className="list-styled">
           <li>
-            buy
-          </li>
-          <li>
             <a className="link-styled" href="#">
-              Store
+              Buy
             </a>
           </li>
           <li>
             <a className="link-styled" href="#">
-              Store
+              History
+            </a>
+          </li>
+          <li>
+            <a className="link-styled" href="#"></a>
+          </li>
+          <li>
+            <a className="link-styled" href="#">
+              Ethos
             </a>
           </li>
           <li>
             <a className="link-styled" href="#">
-              Store
+              Contact
             </a>
           </li>
           <li>
             <a className="link-styled" href="#">
-              Store
+              About
             </a>
           </li>
           <li>
             <a className="link-styled" href="#">
-              Store
-            </a>
-          </li>
-          <li>
-            <a className="link-styled" href="#">
-              Store
-            </a>
-          </li>
-          <li>
-            <a className="link-styled" href="#">
-              Store
+              AI
             </a>
           </li>
           <li>
