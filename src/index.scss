@@ -180,6 +180,7 @@ body {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    cursor: pointer;
   }
 
   .button:after {
@@ -610,6 +611,7 @@ nav {
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    cursor: pointer;
   }
 
   .button:after {
