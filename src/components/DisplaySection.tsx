@@ -7,10 +7,9 @@ function DisplaySection({ triggerPreview }) {
 
   return (
     <div className="display-section wrapper">
-      <h2 className="title">brit</h2>
-      <p className="text">feel the jelly</p>
+      <p className="text">Display</p>
       <span className="description">
-        many moneys many moneys many moneys many moneys many moneys many
+        Inspect this technological marvel in all its glory
       </span>
       <button className="button" onClick={triggerPreview}>
         try me!

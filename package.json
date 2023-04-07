@@ -14,6 +14,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "@types/three": "^0.139.0",
+    "@types/webfontloader": "^1.6.35",
     "@types/webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-types-0.5.5.tgz",
     "barba.js": "^1.0.0",
     "charming": "^3.0.2",
@@ -25,7 +26,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sass": "^1.60.0",
+    "splitting": "^1.0.6",
     "web-vitals": "^2.1.4",
+    "webfontloader": "^1.6.28",
     "webgi": "https://storage.googleapis.com/dist.pixotronics.com/webgi/runtime/bundle-0.5.8.tgz"
   },
   "devDependencies": {

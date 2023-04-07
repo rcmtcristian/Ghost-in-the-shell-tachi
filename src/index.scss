@@ -18,10 +18,20 @@
 }
 
 @font-face {
-  font-family: "futura_now_headlinebold";
+  font-family: "futura";
   src: url("./assets/fonts/futura-kit/monotype_-_futura_now_headline_bd-webfont.woff2")
       format("woff2"),
     url("./assets/fonts/futura-kit/monotype_-_futura_now_headline_bd-webfont.woff")
+      format("woff");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "gabellini_sheppardbook";
+  src: url("./assets/fonts/Gabellini/gabellini_sheppard-webfont.woff2")
+      format("woff2"),
+    url("./assets/fonts/Gabellini/gabellini_sheppard-webfont.woff")
       format("woff");
   font-weight: normal;
   font-style: normal;
@@ -33,12 +43,13 @@ body {
     Helvetica Neue, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000;
-  background-image: url(./assets/images/text.png);
+  background-color: #071731;
+  // background-image: url(./assets/images/text.png);
   background-position: center;
 
   background-size: 102% auto;
   color: #f5f5f7;
+  overflow-x: hidden;
 }
 
 code {
@@ -84,6 +95,7 @@ body {
   flex-direction: column;
   align-items: center;
   top: 0;
+  z-index: 10;
   pointer-events: none;
   min-height: 831px;
   background: transparent;
@@ -151,19 +163,111 @@ body {
     font-weight: 400;
   }
 
-  .button {
-    background: #0071e3;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 17px;
-    font-weight: 400;
-    min-width: 28px;
-    padding: 8px 16px;
-    border-radius: 980px;
-    margin: 15px;
+  .button,
+  .button:after {
+    width: 100px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #f7f7f7 5%);
+    border: 0;
+    color: #0a0808;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #ec5108;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: "ALTERNATE TEXT";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      transparent 3%,
+      #00e6f6 3%,
+      #00e6f6 5%,
+      #ff013c 5%
+    );
+    text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+    clip-path: var(--slice-0);
+  }
+
+  .button:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .button,
+    .button:after {
+      width: 100px;
+      height: 86px;
+
+      line-height: 88px;
+    }
   }
 
   .back-button {
@@ -287,19 +391,110 @@ nav {
     list-style: none;
   }
 
-  .button {
-    background: #0071e3;
+  .button,
+  .button:after {
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #2d2f8d 5%);
+    border: 0;
     color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 17px;
-    font-weight: 400;
-    min-width: 28px;
-    padding: 8px 16px;
-    border-radius: 980px;
-    margin: 0 14px;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00e6f6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: "ALTERNATE TEXT";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      transparent 3%,
+      #00e6f6 3%,
+      #00e6f6 5%,
+      #ff013c 5%
+    );
+    text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+    clip-path: var(--slice-0);
+  }
+
+  .button:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .button,
+    .button:after {
+      width: 200px;
+      height: 86px;
+      line-height: 88px;
+    }
   }
 
   .link {
@@ -332,33 +527,6 @@ nav {
     opacity: 0;
   }
 }
-
-// .loader {
-//   position: fixed;
-//   z-index: 2;
-//   background-color: rgb(0, 0, 0);
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100%;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   // animation-name: fadeOut;
-//   animation-duration: 0.3s;
-//   animation-delay: 3s;
-//   animation-fill-mode: forwards;
-//   pointer-events: none;
-
-//   .logo {
-//     max-width: 800px;
-//     max-height: 400px;
-//     // max-width: 200px;
-//     // max-height: 300px;
-//     width: 100%;
-//     height: 100%;
-//   }
-// }
 
 .sound-section {
   &.wrapper {
@@ -425,20 +593,110 @@ nav {
     list-style: none;
   }
 
-  .button {
-    background: #0071e3;
+  .button,
+  .button:after {
+    width: 150px;
+    height: 76px;
+    line-height: 78px;
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    background: linear-gradient(45deg, transparent 5%, #2d2f8d 5%);
+    border: 0;
     color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    text-align: center;
-    white-space: nowrap;
-    font-size: 17px;
-    font-weight: 400;
-    min-width: 28px;
-    padding: 8px 16px;
-    border-radius: 980px;
-    margin: 0 14px;
-    border: none;
+    letter-spacing: 3px;
+    box-shadow: 6px 0px 0px #00e6f6;
+    outline: transparent;
+    position: relative;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+
+  .button:after {
+    --slice-0: inset(50% 50% 50% 50%);
+    --slice-1: inset(80% -6px 0 0);
+    --slice-2: inset(50% -6px 30% 0);
+    --slice-3: inset(10% -6px 85% 0);
+    --slice-4: inset(40% -6px 43% 0);
+    --slice-5: inset(80% -6px 5% 0);
+
+    content: "ALTERNATE TEXT";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      45deg,
+      transparent 3%,
+      #00e6f6 3%,
+      #00e6f6 5%,
+      #ff013c 5%
+    );
+    text-shadow: -3px -3px 0px #f8f005, 3px 3px 0px #00e6f6;
+    clip-path: var(--slice-0);
+  }
+
+  .button:hover:after {
+    animation: 1s glitch;
+    animation-timing-function: steps(2, end);
+  }
+
+  @keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .button,
+    .button:after {
+      width: 200px;
+      height: 86px;
+      line-height: 88px;
+    }
   }
 
   .link {
@@ -504,7 +762,7 @@ nav {
 }
 
 .overlay {
-  z-index: 10;
+  z-index: 50;
   background-color: #000000;
 
   position: fixed;
@@ -529,4 +787,64 @@ nav {
   border-radius: 50%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   animation: loader 1s infinite ease-in-out;
+}
+
+main {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  color: #475d8c;
+  z-index: -20;
+  margin-top: -5em;
+}
+
+.content {
+  padding: 1em;
+  font-size: clamp(1rem, 0.8786rem + 0.5178vw, 1.5rem);
+  text-align: justify;
+  overflow: hidden;
+  border-radius: 50.5em;
+  font-family: "gabellini_sheppardbook";
+  font-weight: bold;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin: 0;
+}
+
+.splitting .words .word {
+  white-space: nowrap;
+}
+
+@media screen and (min-width: 53em) {
+  .content {
+    grid-template-columns: 15ch 1fr;
+  }
+}
+
+.glass {
+  background-color: Transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 3em;
+  height: 6em;
+  width: 6em;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease-in-out;
+}
+
+.glass:hover {
+  scale: 1.1;
+  filter: brightness(1.1);
+}
+
+.offset {
+  margin-top: -10em;
 }

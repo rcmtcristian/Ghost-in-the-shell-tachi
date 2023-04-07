@@ -15,7 +15,7 @@ function SoundSection(): JSX.Element {
       <div className="body">
         <div className="sound-section-content content">
           <h2 className="title">New Era </h2>
-          <p className="text"> powerful</p>
+          <p className="text"> Bigger And Better</p>
           <span className="description">
             Introducing the Tachikoma, the cutting-edge walker robot that
             combines advanced artificial intelligence with powerful, agile

@@ -107,7 +107,8 @@ const WebgiViewer = forwardRef((prop, ref) => {
       // This must be called once after all plugins are added.
       viewer.renderer.refreshPipeline();
 
-      await manager.addFromPath("scene-tachi-metal.glb");
+      await manager.addFromPath("tachi-claws.glb");
+      // await manager.addFromPath("scene-tachi-metal-test-2.glb");
       viewer.getPlugin(TonemapPlugin).config.clipBackground = true;
 
       viewer.scene.activeCamera.setCameraOptions({ controlsEnabled: false });
